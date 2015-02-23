@@ -1,7 +1,9 @@
 import Card
+import random
+
 # Deck class
 # Author: Matthew Ankerson
-# Date: 23 Feb 2015
+# Date: 24 Feb 2015
 # This class holds cards and performs functions necessary for a Deck
 
 
@@ -10,10 +12,15 @@ class Deck():
 
     # Default constructor
     # Create the Deck of Cards
-    #def __init__(self):
+    def __init__(self):
+        cards = []
+        for suit in ['C', 'D', 'H', 'S']:
+            for value in range(1, 11):
+                self.cards.append(Card.Card(value, suit))
+            for value in ['J', 'Q', 'K', 'A']:
+                self.cards.append(Card.Card(value, suit))
+        random.shuffle(self.cards)
 
-    # Create a complete deck of Cards
-    def makecards(self):
-        # Loop over the 52 Cards
-        for i in xrange(52):
-            c = Card.Card(1, (i + 1))     # Create a new Card
+    # Remove and return a given card from the list of cards
+    def getCard(self):
+        return self.cards.pop()

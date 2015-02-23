@@ -5,14 +5,14 @@
 
 
 class Card():
-    suit = None
-    value = None
+    suits = list['S', 'D', 'H', 'C']
+    values = list[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 'K', 'Q', 'J', 'A']
 
     # Default constructor
     def __init__(self, suit, value):
-        self.suit = suit
-        self.value = value
+        if(suit in self.suits and value in self.values):
+            self.suit = suit
+            self.value = value
 
-    def card(self, suit, value):
-        self.suit = suit
-        self.value = value
+    def  __repr__(self):
+        return str(self.value) + self.suit

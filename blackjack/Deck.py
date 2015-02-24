@@ -8,16 +8,15 @@ import random
 
 
 class Deck():
-    cards = None
 
     # Default constructor
     # Create the Deck of Cards
     def __init__(self):
-        cards = []
-        for suit in ['C', 'D', 'H', 'S']:
+        self.cards = []
+        for suit in "CDHS":
             for value in range(1, 11):
                 self.cards.append(Card.Card(value, suit))
-            for value in ['J', 'Q', 'K', 'A']:
+            for value in "AKQJ":
                 self.cards.append(Card.Card(value, suit))
         random.shuffle(self.cards)
 

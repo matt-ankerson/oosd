@@ -5,14 +5,16 @@
 
 
 class Card():
-    suits = list['S', 'D', 'H', 'C']
-    values = list[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 'K', 'Q', 'J', 'A']
+    suits = frozenset("CDHS")
+    values = frozenset(range(1, 11) + list("KQJA"))
 
     # Default constructor
-    def __init__(self, suit, value):
+    def __init__(self, value, suit):
         if(suit in self.suits and value in self.values):
             self.suit = suit
             self.value = value
+        else:
+            raise ValueError("Illegal suit or value")
 
-    def  __repr__(self):
-        return str(self.value) + self.suit
+    def __repr__(self):
+        return str(self.value) + str(self.suit)

@@ -5,7 +5,6 @@ import re
 # Date: 24 Feb 2015
 # This class inherits Participant class and adds methods relevant only to the House
 
-
 class House(Participant.Participant):
 
     # Offer another implementation of hitOrStand()

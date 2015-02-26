@@ -1,14 +1,14 @@
-import Hand
-import re
+import BlackjackHand
 
 # Participant class - serves as a parent class to the House class
 # Date 24 Feb 2015
 
 class Participant():
+    hand = None
 
-    # Default constructor
+    # Constructor
     def __init__(self):
-        self.hand = Hand.Hand()
+        self.hand = BlackjackHand.BlackjackHand
 
     # Remove a card from the deck and add to this players hand
     def takeCard(self, card):

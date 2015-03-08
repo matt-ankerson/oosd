@@ -1,6 +1,7 @@
 import unittest
 import myset
 
+
 class TestMySet(unittest.TestCase):
 
     def setUp(self):
@@ -30,7 +31,26 @@ class TestMySet(unittest.TestCase):
         testintersect = [1, 2, 3, 4, 5]
         self.assertEqual(self.myset.intersection(self.testitems), testintersect)
 
-        # assertItemsEqual
+    def test_union(self):
+        testunion = [1, 2, 3, 4, 5, 6, 7]
+        testinput = [6, 7]
+        self.assertItemsEqual(self.myset.union(testinput), testunion)
+
+    def test_is_subset(self):
+        testsubset = [1, 2, 3, 4, 5, 6]
+        self.assertTrue(self.myset.is_subset_of(testsubset))
+        self.assertFalse(self.myset.is_subset_of([9, 8, 7]))
+
+    def test_is_equal_to(self):
+        test_equal_set = [1, 2, 3, 4, 5]
+        self.assertTrue(self.myset.is_equal_to(test_equal_set))
+        self.assertFalse(self.myset.is_equal_to([1, 2, 3]))
+
+    def test_is_proper_subset(self):
+        testbigsuperset = [1, 2, 3, 4, 5, 6, 7]
+        testsmallsuperset = [1, 2, 3, 4]
+        self.assertTrue(self.myset.is_proper_subset_of(testbigsuperset))
+        self.assertFalse(self.myset.is_proper_subset_of(testsmallsuperset))
 
 if __name__ == '__main__':
     unittest.main()

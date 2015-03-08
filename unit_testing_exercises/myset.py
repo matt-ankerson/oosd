@@ -53,18 +53,26 @@ class MySet:
 
     def union(self, otherset):
         """"Returns a new set that is the union of self and otherset"""
-        pass
+        # append all values from 'a' to 'b', to make a new set 'c'
+        union = [x for x in otherset + self.items]
+        return union
 
     def is_subset_of(self, otherset):
         """Returns True if self is a subset of otherset."""
-        pass
+        # This method doesn't require the subset values to exist consecutively.
+        subset = [x for x in otherset if x in self.items]
+        return len(subset) == len(self.items)
+        # return otherset.__contains__(self.items)
+        # return set(self.items) < set(otherset)
 
     def is_equal_to(self, otherset):
         """Returns True if self and otherset are equal, i.e.,
            they have the exact same members.
         """
-        pass
+        return self.items == otherset
 
     def is_proper_subset_of(self, otherset):
         """Returns True is self is a *proper* subset of otherset."""
-        pass
+        # "A proper subset is a subset that has at least one less element than it's super set."
+        subset = [x for x in otherset if x in self.items]
+        return len(subset) < (len(otherset) - 1)

@@ -1,11 +1,13 @@
+import strategy
+
 """ this class implements one strategy that we can plug into The Player class """
 # Author: Matthew Ankerson
 # Date: 12 March 2015
 
-class Strategy2():
+class Strategy2(strategy.Strategy):
 
     def __init__(self):
-        pass
+        strategy.Strategy.__init__(self)
 
     # implements a unique strategy - make a decision based on the user's hand.
     # ie. don't hit if the user has already bust.

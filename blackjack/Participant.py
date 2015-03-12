@@ -4,6 +4,7 @@ import strategy1
 # Participant class - serves as a parent class to the House class
 # Date 24 Feb 2015
 
+
 class Participant():
 
     # Constructor

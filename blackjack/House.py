@@ -1,4 +1,5 @@
 import Participant
+import strategy2
 import re
 
 # House class
@@ -7,10 +8,13 @@ import re
 
 class House(Participant.Participant):
 
-    # Offer another implementation of hitOrStand()
-    # Stand if the score is above 17
-    def hitOrStand(self):
-        return self.hand.getScore() < 17
+    def __init__(self):
+        self.strat2 = strategy2.Strategy2()
+        Participant.Participant.__init__(self)
+
+    # Use the strategy from strategy2
+    def hitOrStand(self, other_hand, deck):
+        return self.strat2.hit_or_stand(self.hand, other_hand, deck)
 
     # Show the flop
     def showHandHiddenDown(self):

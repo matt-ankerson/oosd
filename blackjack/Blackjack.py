@@ -26,7 +26,7 @@ print("You: " + p.showHand())
 print("Your play")
 
 # p.hitOrStand will return true while the player wants to hit
-while(p.hitOrStand()):
+while(p.hitOrStand(h.hand, d)):
     p.takeCard(d.getCard())
     print("House: " + h.showHandHiddenDown())
     print("You " + p.showHand())
@@ -39,8 +39,8 @@ print("House: " + h.showHand())
 print("You: " + p.showHand())
 print("==========")
 print("")
-# h.hitOrStand will return true while House's score is less than 17
-while(h.hitOrStand()):
+# h.hitOrStand will return true or false
+while(h.hitOrStand(p.hand, d)):
     h.takeCard(d.getCard())
     print("House: " + h.showHand())
     print("You: " + p.showHand())
@@ -51,7 +51,7 @@ while(h.hitOrStand()):
         sys.exit()
     print("")
 
-if(p.getScore() > h.getScore()):
+if p.getScore() > h.getScore() & p.getScore() <= 21:
     print("You win!")
 else:
     print("House wins")

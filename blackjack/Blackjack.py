@@ -8,8 +8,10 @@ import sys
 import Deck
 import Participant
 import House
+import strategy_shuffle2
 
-d = Deck.Deck()
+shuffle_strat = strategy_shuffle2.StrategyShuffle2()
+d = Deck.Deck(shuffle_strat)
 p = Participant.Participant()
 h = House.House()
 
@@ -51,7 +53,7 @@ while(h.hitOrStand(p.hand, d)):
         sys.exit()
     print("")
 
-if p.getScore() > h.getScore() & p.getScore() <= 21:
+if p.getScore() > h.getScore() and p.getScore() <= 21:
     print("You win!")
 else:
     print("House wins")

@@ -1,5 +1,5 @@
 import Participant
-import strategy2
+import strategy_hits2
 import re
 
 # House class
@@ -9,7 +9,7 @@ import re
 class House(Participant.Participant):
 
     def __init__(self):
-        self.strat2 = strategy2.Strategy2()
+        self.strat2 = strategy_hits2.Strategy2()
         Participant.Participant.__init__(self)
 
     # Use the strategy from strategy2

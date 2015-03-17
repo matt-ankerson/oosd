@@ -14,7 +14,7 @@ class Deck():
         self.cards = []
         self.strategy = strategy
         for suit in "CDHS":
-            for value in range(1, 11):
+            for value in range(2, 11):
                 self.cards.append(Card.Card(value, suit))
             for value in "AKQJ":
                 self.cards.append(Card.Card(value, suit))

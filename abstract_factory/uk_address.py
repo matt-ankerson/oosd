@@ -36,6 +36,5 @@ class UkAddress(AddressFactory):
         address += self.recipient + "\n"
         if not self.address_line == "":
             address += self.address_line + "\n"
-        
 
         return address

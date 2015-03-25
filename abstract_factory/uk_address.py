@@ -20,21 +20,26 @@ class UkAddress(AddressFactory):
     # validate the address data
     def validate_address(self):
         address_okay = True
-
         # ensure that all data is of the appropriate type
         if not isinstance(self.recipient, str) or not isinstance(self.address_line, str)\
                 or not isinstance(self.city, str) or not isinstance(self.post_code, str)\
                 or not isinstance(self.organisation, str) or not isinstance(self.building_name, str)\
                 or not isinstance(self.locality, str):
             address_okay = False
-
         return address_okay
 
     # string the data together in the correct format and return it
     def __repr__(self):
         address = ""
         address += self.recipient + "\n"
-        if not self.address_line == "":
-            address += self.address_line + "\n"
+        if not self.organisation == "":
+            address += self.organisation + "\n"
+        if not self.building_name == "":
+            address += self.building_name + "\n"
+        address += self.address_line + "\n"
+        if not self.locality == "":
+            address += self.locality + "\n"
+        address += self.city + "\n"
+        address += self.post_code
 
         return address

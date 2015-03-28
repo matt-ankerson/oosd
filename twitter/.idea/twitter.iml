@@ -4,7 +4,5 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="subject_observer_bicycle" />
-    <orderEntry type="module" module-name="twitter" />
   </component>
 </module>

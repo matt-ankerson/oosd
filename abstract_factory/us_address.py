@@ -31,13 +31,13 @@ class UsAddress(AddressFactory):
     def __repr__(self):
         address = ""
         address += self.recipient + "\n"
-        address += self.address_line_1 + "\n"
-        address += self.city + "\n"
-        address += self.state + "\n"
-        address += self.post_code + "\n"
         if not self.organisation == "":
             address += self.organisation + "\n"
+        address += self.address_line_1 + "\n"
         if not self.address_line_2 == "":
             address += self.address_line_2 + "\n"
+        address += self.city + "\n"
+        address += self.state + "\n"
+        address += self.post_code
 
         return address

@@ -22,6 +22,9 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="placeholderText">
+    <string>Write your tweet</string>
+   </property>
   </widget>
   <widget class="QLabel" name="lblMessage">
    <property name="geometry">

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../state_pattern/.idea/state_pattern.iml" filepath="$PROJECT_DIR$/../state_pattern/.idea/state_pattern.iml" />
       <module fileurl="file://$PROJECT_DIR$/../subject_observer_bicycle/.idea/subject_observer_bicycle.iml" filepath="$PROJECT_DIR$/../subject_observer_bicycle/.idea/subject_observer_bicycle.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/twitter.iml" filepath="$PROJECT_DIR$/.idea/twitter.iml" />
     </modules>

@@ -14,7 +14,7 @@ class VendingMachine():
         self.products = {"Chips": 3.00, "Chocolate": 2.50, "Peanuts": 3.0}
         self.selection = ""
 
-    # Add to the received amount of money
+    # Add to the received amount of money (state object will handle insufficient funds)
     def insert_money(self, amount):
         self.money_received = self.money_received + amount
 
@@ -22,7 +22,7 @@ class VendingMachine():
     def cancel_transaction(self):
         self.state = states.MakingChangeState()
 
-    # Decide if a valid selection was given.
+    # Set the selection (state object will handle invalid selection)
     def make_selection(self, selection):
         self.selection = selection
 

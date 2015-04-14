@@ -29,7 +29,7 @@ class WaitingState(State):
                 return WaitingState()
             else:
                 print("Invalid selection")
-                exit()
+                return MakingChangeState()
 
     def __repr__(self):
         return "The vending machine is waiting."

@@ -1,34 +1,39 @@
 # Author: Matt Ankerson
 # Date: 22 April 2015
+# Lambda expression exercises 8.1
 
-# Write a lambda expression that computes factorials. (Use reduce)
-print(reduce(lambda x, y: x * y, range(1, 6)))
+# 1. Lambda expression that computes factorials.
+factorial = lambda i: reduce(lambda x, y: x * y, range(1, i))
 
 
-# Write a function that takes a string and a character and returns a new string that is the
+# 2. Function that takes a string and a character and returns a new string that is the
 # original string with all occurences of the character removed.
-def remove_letter(c="h", st="hello world"):
-    return filter(lambda x: x != c, st)
-
 remove_a_letter = lambda st, c: filter(lambda x: x != c, st)
-print(remove_a_letter("hello world", "o"))
 
-# Write a function that is similar to the one above,
-# but that returns the number of occurences of the character.
+
+# 3. Function that returns the number of occurences of the character.
 count_occurences = lambda st, c: len(filter(lambda x: x == c, st))
-print(count_occurences("hello world", "o"))
 
 
-# Write a function that takes a string and a character and returns the number of words that start with the character.
-def count_words(st, c):
-    return len([word for word in st.split() if word.startswith(c)])
-print(count_words("cracker crunch monday", "c"))
+# 4. Function that takes a string and a character and returns the number of words that start with the character.
+count_words = lambda st, c: len([word for word in st.split() if word.startswith(c)])
 
-# Write a function that takes a string and a character and returns a new string
+
+# 5. Function that takes a string and a character and returns a new string
 # that is the original string with all occurences of the character in uppercase.
+replace_with_upper = lambda st, c: "".join(map(lambda x: x.upper() if (c == x) else x, st))
 
 
-# Write your own version of map (call it mymap) using a loop.
+# Version of map using a loop.
+def mymap(f, list):
+    new_list = []
+    for item in list:
+        new_list.append(f(item))
+    return new_list
 
 
-# Rewrite mymap using recursion.
+# Version of map using recursion.
+def mymap_recursion(f, list):
+    if list:
+        return []
+    return [f(list[0]) + mymap_recursion(f, list[:1])]

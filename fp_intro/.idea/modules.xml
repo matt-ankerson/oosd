@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../closures/.idea/closures.iml" filepath="$PROJECT_DIR$/../closures/.idea/closures.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/fp_intro.iml" filepath="$PROJECT_DIR$/.idea/fp_intro.iml" />
     </modules>
   </component>

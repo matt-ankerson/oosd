@@ -36,7 +36,6 @@ def memoise_fib():
 # Remember that xrange is a generator function, whereas range is not.
 #   The difference is that a generator simply gives us the value we need, when we need it.
 #   (Without the expense of constructing the entire list)
-# We are probably going to need to implement a closure here to maintain a reference to the current list item.
 def primes(n):
     if n == 0:
         return []
@@ -47,3 +46,14 @@ def primes(n):
         no_p = {j for i in p for j in range(i*2, n, i)}
         p = {x for x in range(2, n) if x not in no_p}
         return p
+
+
+def primes_gen(n):
+    if n == 0 or n == 1:
+        yield n
+    else:
+        p = primes(int(sqrt(n)))
+        no_p = {j for i in p for j in range(i*2, n, i)}
+        for x in range(2, n):
+            if x not in no_p:
+                yield x

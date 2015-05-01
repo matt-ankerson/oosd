@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/../first_multi_threading/.idea/first_multi_threading.iml" filepath="$PROJECT_DIR$/../first_multi_threading/.idea/first_multi_threading.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/fp_intro.iml" filepath="$PROJECT_DIR$/.idea/fp_intro.iml" />
       <module fileurl="file://$PROJECT_DIR$/../metservice_multithreading/.idea/metservice_multithreading.iml" filepath="$PROJECT_DIR$/../metservice_multithreading/.idea/metservice_multithreading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../work_queues_threading/.idea/work_queues_threading.iml" filepath="$PROJECT_DIR$/../work_queues_threading/.idea/work_queues_threading.iml" />
     </modules>
   </component>
 </project>

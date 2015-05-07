@@ -8,5 +8,8 @@
     <orderEntry type="module" module-name="first_multi_threading" />
     <orderEntry type="module" module-name="metservice_multithreading" />
     <orderEntry type="module" module-name="work_queues_threading" />
+    <orderEntry type="module" module-name="xml_json" />
+    <orderEntry type="module" module-name="document_factory" />
+    <orderEntry type="module" module-name="twitter" />
   </component>
 </module>

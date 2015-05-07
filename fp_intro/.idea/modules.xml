@@ -3,10 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../closures/.idea/closures.iml" filepath="$PROJECT_DIR$/../closures/.idea/closures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../document_factory/.idea/document_factory.iml" filepath="$PROJECT_DIR$/../document_factory/.idea/document_factory.iml" />
       <module fileurl="file://$PROJECT_DIR$/../first_multi_threading/.idea/first_multi_threading.iml" filepath="$PROJECT_DIR$/../first_multi_threading/.idea/first_multi_threading.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/fp_intro.iml" filepath="$PROJECT_DIR$/.idea/fp_intro.iml" />
       <module fileurl="file://$PROJECT_DIR$/../metservice_multithreading/.idea/metservice_multithreading.iml" filepath="$PROJECT_DIR$/../metservice_multithreading/.idea/metservice_multithreading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../twitter/.idea/twitter.iml" filepath="$PROJECT_DIR$/../twitter/.idea/twitter.iml" />
       <module fileurl="file://$PROJECT_DIR$/../work_queues_threading/.idea/work_queues_threading.iml" filepath="$PROJECT_DIR$/../work_queues_threading/.idea/work_queues_threading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../xml_json/.idea/xml_json.iml" filepath="$PROJECT_DIR$/../xml_json/.idea/xml_json.iml" />
     </modules>
   </component>
 </project>

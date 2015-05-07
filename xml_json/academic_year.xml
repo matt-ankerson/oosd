@@ -2,52 +2,73 @@
     <semester number="1" start="february" end="june">
         <course name="web 3" roll="30">
 
-            <lecturer>Patricia</lecturer>
-            <lecturer>David</lecturer>
-            <assignment>asp.net mvc</assignment>
-            <assignment>javascript</assignment>
+            <lecturer name="Patricia">
+            </lecturer>
+            <lecturer name="David">
+            </lecturer>
+            <assignment name="asp.net mvc">
+            </assignment>
+            <assignment name="javascript">
+                yoyo
+            </assignment>
 
         </course>
         <course name="mobile development" roll="22">
 
-            <lecturer>Patricia</lecturer>
-            <assignment>android development project</assignment>
-            <exam>android exam</exam>
+            <lecturer name="Patricia">
+            </lecturer>
+            <assignment name="android development project">
+            </assignment>
+            <exam name="android exam">
+            </exam>
 
         </course>
         <course name="oosd" roll="40">
 
-            <lecturer>Tom</lecturer>
-            <assignment>python project</assignment>
-            <exam>oosd principles exam</exam>
+            <lecturer name="Tom">
+            </lecturer>
+            <assignment name="python project">
+            </assignment>
+            <exam name="oosd principles exam">
+            </exam>
 
         </course>
         <course name="project" roll="33">
 
-            <lecturer>Sam</lecturer>
-            <assignment>project for abacusbio</assignment>
+            <lecturer name="Sam">
+            </lecturer>
+            <assignment name="project for abacusbio">
+            </assignment>
 
         </course>
     </semester>
     <semester number="2" start="july" end="november">
         <course name="databases 3" roll="22">
 
-            <lecturer>David</lecturer>
-            <assignment>database project</assignment>
-            <exam>databases exam</exam>
+            <lecturer name="David">
+            </lecturer>
+            <assignment name="database project">
+            </assignment>
+            <exam name="databases exam">
+            </exam>
 
         </course>
         <course name="algorithms and data structures" roll="19">
 
-            <lecturer>Tom</lecturer>
-            <assignment>intense ads project</assignment>
-            <exam>ads exam</exam>
+            <lecturer name="Tom">
+            </lecturer>
+            <assignment name="intense ads project">
+            </assignment>
+            <exam name="ads exam">
+            </exam>
 
         </course>
         <course name="project" roll="30">
 
-            <lecturer>Sam</lecturer>
-            <assignment>project for abacusbio</assignment>
+            <lecturer name="Sam">
+            </lecturer>
+            <assignment name="project for abacusbio">
+            </assignment>
 
         </course>
     </semester>

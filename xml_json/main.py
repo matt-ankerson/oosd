@@ -16,11 +16,8 @@ if __name__ == "__main__":
     # get the file name/path
     file_name = raw_input("Filename: ")
 
-    # create the document factory
-    df = DocumentFactory()
-
     # create the appropriate document
-    doc = df.create_document(file_name)
+    doc = DocumentFactory.create_document(file_name)
 
     # get the dictionary representation from the document
     dic = doc.doc

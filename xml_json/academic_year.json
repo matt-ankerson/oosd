@@ -1,0 +1,70 @@
+{
+  "year": {
+    "semester": [
+      {
+        "start": "february",
+        "end": "june",
+        "course": [
+          {
+            "name": "web 3",
+            "roll": "30",
+            "lecturer": [
+              { "name": "Pat" },
+              { "name": "Davo" }
+            ],
+            "assignment": [
+              { "name": "asp.net mvc" },
+              { "name": "javascript" }
+            ]
+          },
+          {
+            "name": "mobile development",
+            "roll": "22",
+            "lecturer": { "name": "Pat" },
+            "assignment": { "name": "android development project" },
+            "exam": { "name": "android exam" }
+          },
+          {
+            "name": "oosd",
+            "roll": "40",
+            "lecturer": { "name": "Tom" },
+            "assignment": { "name": "python project" },
+            "exam": { "name": "oosd principles exam" }
+          },
+          {
+            "name": "project",
+            "roll": "33",
+            "lecturer": { "name": "Sam" },
+            "assignment": { "name": "project for abacusbio" }
+          }
+        ]
+      },
+      {
+        "start": "july",
+        "end": "november",
+        "course": [
+          {
+            "name": "databases 3",
+            "roll": "22",
+            "lecturer": { "name": "Davo" },
+            "assignment": { "name": "database project" },
+            "exam": { "name": "databases exam" }
+          },
+          {
+            "name": "algorithms and data structures",
+            "roll": "19",
+            "lecturer": { "name": "Tom" },
+            "assignment": { "name": "intense ads project" },
+            "exam": { "name": "ads exam" }
+          },
+          {
+            "name": "project",
+            "roll": "30",
+            "lecturer": { "name": "Sam" },
+            "assignment": { "name": "project for abacusbio" }
+          }
+        ]
+      }
+    ]
+  }
+}

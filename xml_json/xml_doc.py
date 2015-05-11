@@ -22,5 +22,4 @@ class XmlDoc(Document):
     def read(self):
         tree = ET.parse(self.file_path)
         print(self.file_path)
-        xml_doc = self.tree_to_dict(tree.getroot())
-        return xml_doc
+        return self.tree_to_dict(tree.getroot())

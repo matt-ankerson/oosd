@@ -1,21 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <year>
-    <semester number="1" start="february" end="june">
+    <semester start="february" end="june">
         <course name="web 3" roll="30">
 
-            <lecturer name="Patricia">
+            <lecturer name="Pat">
             </lecturer>
-            <lecturer name="David">
+            <lecturer name="Davo">
             </lecturer>
             <assignment name="asp.net mvc">
             </assignment>
             <assignment name="javascript">
-                yoyo
             </assignment>
 
         </course>
         <course name="mobile development" roll="22">
 
-            <lecturer name="Patricia">
+            <lecturer name="Pat">
             </lecturer>
             <assignment name="android development project">
             </assignment>
@@ -42,10 +42,10 @@
 
         </course>
     </semester>
-    <semester number="2" start="july" end="november">
+    <semester start="july" end="november">
         <course name="databases 3" roll="22">
 
-            <lecturer name="David">
+            <lecturer name="Davo">
             </lecturer>
             <assignment name="database project">
             </assignment>

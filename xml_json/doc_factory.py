@@ -7,11 +7,9 @@ from json_doc import JsonDoc
 
 class DocumentFactory():
 
-    def __init__(self):
-        pass
-
     # pass in the file path, create the appropriate dictionary document
-    def create_document(self, file_path):
+    @staticmethod
+    def create_document(file_path):
         file_type = file_path.split('.')[1]
         if file_type == "xml":
             return XmlDoc(file_path)

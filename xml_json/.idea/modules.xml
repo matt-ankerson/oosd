@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../metservice_multithreading/.idea/metservice_multithreading.iml" filepath="$PROJECT_DIR$/../metservice_multithreading/.idea/metservice_multithreading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../signup/.idea/signup.iml" filepath="$PROJECT_DIR$/../signup/.idea/signup.iml" />
       <module fileurl="file://$PROJECT_DIR$/../sqlalchemy_orm/.idea/sqlalchemy_orm.iml" filepath="$PROJECT_DIR$/../sqlalchemy_orm/.idea/sqlalchemy_orm.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/xml_json.iml" filepath="$PROJECT_DIR$/.idea/xml_json.iml" />
     </modules>

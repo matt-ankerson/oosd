@@ -11,30 +11,36 @@ import requests
 class SignUpService(object):
     exposed = True  # expose all methods
 
-    # force the responses content-type to be text/plain
-    @cherrypy.tools.accept(media='application/json')
+    # Validate a new user. Validate any given fields, return an appropriate response
+    @cherrypy.tools.json_out()
     def GET(self, email="", password="", screen_name=""):
-        # validate the new user
-        if email == "" or password == "" or screen_name == "":
-            return '{"response":"invalid"}'
-        else:
-            return '{"response":"valid"}'
+        new_user = {'email': email, 'password': password, 'screen_name': screen_name}
+        response = {'email': 'valid', 'password': 'valid', 'screen_name': 'valid'}  # Assume all valid
+        for key, value in new_user.iteritems():
+            if value == "":     # implement more complex criteria
+                response[key] = "invalid"   # include more detailed errors
+        return response
 
     # A sample request to the above ^^ function would be as follows:
-    # r = s.get('http://127.0.0.1:8080/', headers={'Accept':'application/json'},
-    #               params={'email':'yoyo@yoyo', 'password':'yoyo', 'screen_name':'yoyo'})
+    # r = s.get('http://127.0.0.1:8080/', params={'email':'yoyo@yoyo', 'password':'yoyo', 'screen_name':'yoyo'})
 
-    def POST(self, email="", password="", screen_name=""):
-        s = requests.Session()
-        pay_load = {'email': email, 'password': password, 'screen_name': screen_name}
-        # create a request to the user module for storage of a new user
-        r = s.post("url to user directory", data=pay_load)
-        if r.status_code == requests.codes.ok:
-            return '{"response":"success"}'
-        else:
-            return '{"response":"error: "' + str(r.status_code) + '"}'
+    # create a request to the user-directory module for storage of a new user
+    @cherrypy.tools.json_out()
+    @cherrypy.tools.json_in()
+    def POST(self):
+        new_user = cherrypy.request.json()  # get the new user
+        proceed = True                      # check the new user
+        response = "{'response': 'user is invalid'}"
+        user_assessment = self.GET(new_user['email'], new_user['password'], new_user['screen_name'])
+        for key, value in user_assessment.iteritems():
+            if value == 'invalid':
+                proceed = False
 
-    # use session.post to call the POST function
+        if proceed:
+            heads = {'Content-Type': 'application/json'}
+            response = requests.post("url to user directory", headers=heads, data=new_user).json()
+        return response
+
 
 # switch from the default mechanism of matching URLs to methods
 # for one that is aware of the whole HTTP method shenanigan with: MethodDispatcher()
@@ -42,9 +48,9 @@ if __name__ == "__main__":
     conf = {
         '/': {
             'request.dispatch': cherrypy.dispatch.MethodDispatcher(),
-            'tools.sessions.on': True,
+            # 'tools.sessions.on': True,
             'tools.response_headers.on': True,
-            'tools.response_headers.headers': [('Content-Type', 'text/plain')],
+            'tools.response_headers.headers': [('Content-Type', 'application/json')],
         }
     }
     cherrypy.quickstart(SignUpService(), '/', conf)

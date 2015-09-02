@@ -4,8 +4,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Python 2.7.6 (/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="sqlalchemy_orm" />
-    <orderEntry type="module" module-name="metservice_multithreading" />
-    <orderEntry type="module" module-name="signup" />
+    <orderEntry type="module" module-name="user_dir" />
   </component>
 </module>
